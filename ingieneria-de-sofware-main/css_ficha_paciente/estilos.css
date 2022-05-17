@@ -63,3 +63,17 @@
     background-size: cover;
 
 }
+
+.nav-link{
+    color: #fff;
+}
+.comprar button{
+    border-radius: 7px;
+    border: none;
+    background-color:rgb(135, 206, 235);
+    color: #fff;
+    padding: 5px;
+    margin-left: 750px;
+    margin-bottom: 20px;
+    
+}
