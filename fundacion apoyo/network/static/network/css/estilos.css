@@ -1,0 +1,86 @@
+.centrado{
+    text-align: center;
+}
+
+.logo_menu{
+    width: 50%;
+    max-width: 100px;
+    height: 50%;
+    max-height: 100px;
+
+}
+
+.espaciado{
+    padding-top: 16px; /*espacio entre dos cosas*/
+}
+
+
+.letrasinicio{
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+
+
+.borde1{
+
+   background: rgba(130, 167, 176, 0.836);
+   border-radius: 20px;
+}
+
+
+
+.borde2{
+    border-radius: 20px;       
+    background: rgba(159, 175, 179, 0.836);
+    padding: 20px;
+  margin-left: 1px;
+}
+
+.formcss{
+    background-color: #fff;
+}
+
+
+#img_arre { /*modifica el tamaño de la imagen en las historias dentro de los cuadros*/
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+    
+}
+
+#img_historias { /*modifica el tamaño de la imagen en las historias dentro de los cuadros*/
+    max-width: 1500px;
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    
+}
+.rowboton{
+    color: aqua;
+}
+
+
+.body1{
+    background-image: url('../img/fondo.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.nav-link{
+    color: #fff;
+}
+.comprar button{
+    border-radius: 7px;
+    border: none;
+    background-color:rgb(135, 206, 235);
+    color: #fff;
+    padding: 5px;
+    margin-left: 750px;
+    margin-bottom: 20px;
+    
+}

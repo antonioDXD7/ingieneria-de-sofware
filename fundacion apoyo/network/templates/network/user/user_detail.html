@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css_ficha_paciente/estilos.css">
+
+  <title>Ayuda a los ancianos</title>
+</head>
+
+<body class="body1">
+
+  <!--=========================================-->
+  <!--ENCABEZADO-->
+  <!--=========================================-->
+
+  <header>
+
+
+
+    <nav class="navbar navbar-expand-sm   fixed-top " style="background-color: rgb(135, 206, 235);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img
+            src="https://cdn.iconscout.com/icon/free/png-256/network-nodes-connection-sharing-social-media-1-9592.png"
+            class="me-2" height="40" alt="" loading="lazy" />
+          <small>My Network</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto centrado">
+            <li class="nav-item">
+              <a class="nav-link" href="/">INICIO</a>
+            </li>
+          
+          </ul>
+
+          <div class="d-flex align-items-center me-3">
+            {% if user.is_authenticated %}
+            <a href={% url 'users:profile' %}>
+              <img src={{ user.profile_pic.url }} class="rounded-circle" height="30" width='30' alt="" loading="lazy" />
+            </a>
+            {% else %}
+            <button type="button" class="btn btn-primary" data-mdb-toggle='modal' data-mdb-target='#loginModal'>
+              Iniciar Sesión
+            </button>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+
+
+  </header>
+<div class='container d-flex justify-content-center mt-5 col-md-10 col-xl-8'>
+  <div class="card shadow-4-strong mb-3" style="margin-top: 13%;">
+    <div class="row g-0">
+      <div class="col-md-5">
+        <img src={{ user_detail.profile_pic.url }} alt="..." class="img-fluid rounded" />
+      </div>
+      <div class="col-md-7">
+        <div class="card-body">
+          <div class='row justify-content-center'>
+            <h4 class="col-12 card-title text-center mb-4">{{ user_detail.first_name}} {{ user_detail.last_name}}</h4>
+
+
+            <p class="card-text text-center mb-5">{{ user_detail.bio }}</p>
+            {% if is_follower %}
+            <a type="button" class="btn btn-secondary btn-rounded col-5"
+              href={% url 'users:follow' slug=user_detail.slug %}>Dejar de Seguir</a>
+            {% elif user_detail != user and user.email %}
+            <a type="button" id='follow' class="btn btn-primary btn-rounded col-5"
+              href={% url 'users:follow' slug=user_detail.slug %}>Seguir</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

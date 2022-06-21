@@ -1,0 +1,158 @@
+{% extends "./base.html" %}
+
+{% block content %}
+{% load static %}
+
+
+
+
+  <div class="row espaciado  letrasinicio " style="margin-top: 5%; margin-bottom: 5%;">
+    <div class="col-md-1 hidden-sm"></div>
+
+
+    <div class="col-sm-10 col-md-10  espaciado">
+      <div class="card  borde1 letrasinicio">
+        <div class="card-body">
+          <h3 class="centrado"> Ficha del residente</h3>
+          <h5 class="card-title text-center "><img id="img_historias" src="{% static 'network/img/padre.png' %}"></h5>
+          <h2 class="centrado">Nombre del residente</h2>
+
+
+
+
+          <div class="row  centrado">
+            <div class="col-md-2 col-ms-2"></div>
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h3> Nombres: Axel israel</h3>
+              <h3>Apellidos: Cisternas Vera</h3>
+            </div>
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+
+              <h3>Edad: 72 años </h3>
+              <h3>Rut: 32.777.666.1</h3>
+
+            </div>
+
+
+            <div class="col-md-2 col-ms-2"></div>
+
+            <p class="card-text text-righf">
+              <a class="btn btn-dark" href="agregarAnotacion" role="button">Agregar anotacion</a>
+            </p>
+
+            <p class="card-text text-righf">
+              <a class="btn btn-dark" href="anotaciones" role="button">Ver anotacion</a>
+            </p>
+
+
+          </div>
+     
+         
+
+
+          <!--Primer familiar-->
+          <div class="row espaciado centrado borde2" style="margin-top: 10px;">
+            <h3 class="espaciado"> Primer familiar</h3>
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="card-title text-center "><img id="img_arre"  src="{% static 'network/img/hija.jfif' %}" ></h5>
+            </div>
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="centrado"> NOMBRE DEL FAMILIAR: <br> Maria soto ortiz</h5>
+              <h5 class="centrado espaciado">Edad: <br> 26 años</h5>
+            </div>
+
+
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="centrado"> Relacion con el anciano: <br> Hija</h5>
+              <h5 class="centrado espaciado">Celular de contacto: <br> +22 70 84 000</h5>
+            </div>
+
+          </div>
+
+
+          <!--Segundo familiar-->
+
+          <div class="row espaciado centrado borde2" style="margin-top: 10px;">
+            <h3 class="espaciado"> Segundo familiar</h3>
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="card-title text-center "><img id="img_arre"  src="{% static 'network/img/hijo.png' %}" ></h5>
+            </div>
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="centrado"> NOMBRE DEL FAMILIAR: <br> Brand Soto Ortiz</h5>
+              <h5 class="centrado espaciado">Edad: <br> 35 años</h5>
+            </div>
+
+
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="centrado"> Relacion con el anciano: <br> Hijo</h5>
+              <h5 class="centrado espaciado">Celular de contacto: <br> +22 70 80 000</h5>
+            </div>
+
+          </div>
+
+
+          <!--Tercer  familiar-->
+
+          <div class="row espaciado centrado borde2" style="margin-top: 10px;">
+            <h3 class="espaciado"> Tercer familiar</h3>
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="card-title text-center "><img id="img_arre"  src="{% static 'network/img/nieto.jfif' %}" ></h5>
+            </div>
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="centrado"> NOMBRE DEL FAMILIAR: <br> Alexys Neira Ortiz</h5>
+              <h5 class="centrado espaciado">Edad: <br> 19 años</h5>
+            </div>
+
+
+
+
+            <div class="col-sm-4 col-md-4 centrado espaciado">
+              <h5 class="centrado"> Relacion con el anciano: <br> nieto</h5>
+              <h5 class="centrado espaciado">Celular de contacto: <br> +22 70 82 423</h5>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md1 hidden-sm"></div>
+  </div>
+
+
+
+
+  {% endblock %}

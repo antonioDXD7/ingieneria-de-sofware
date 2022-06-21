@@ -1,0 +1,79 @@
+{% extends "./base.html" %}
+
+{% block content %}
+{% load static %}
+
+<div class=" container centrado">
+
+  <div class="row" style="margin-top: 12%; margin-bottom: 4%;">
+    <div class="col-md-2 hidden-sm"></div>
+
+    <div class="col-md-8 col-sm-12  borde2">
+      <form action="aportes" id="enviarmensajeadmi" enctype="multipart/form-data" name="mensajealadmi">
+        <h2 class="centrado letrasregistroylogin">AQUI PODRA AGREGAR UN APORTE AL ASILO</h2>
+        <div class="row letrasregistroylogin">
+
+
+          <div class="form-group col-md-12 col-sm-12">
+            <label>
+              <h4>Ingrese su primer nombre</h4>
+            </label>
+            <input type="text" name="nombreaportador" class="form-control" required>
+          </div>
+
+          <div class="form-group col-md-12 col-sm-12">
+            <label>
+              <h4>Ingrese su primer apellido</h4>
+            </label>
+            <input type="text" name="apellidoaportador" class="form-control" required>
+          </div>
+
+          <div class="form-group col-md-12 col-sm-12">
+            <label>
+              <h4>Ingrese su Edad</h4>
+            </label>
+            <input type="text" name="edadaportador" class="form-control" required>
+          </div>
+
+          <div class="form-group col-md-12 col-sm-12">
+            <label>
+              <h4>Ingrese su correo Electronico para enviarle un comprobante </h4>
+            </label>
+            <input type="email" name="correoaportador" class="form-control" required>
+          </div>
+
+
+          <div class="form-group col-md-12 col-sm-12">
+            <label>
+              <h4>Ingrese un pequeño mensaje que quiera darnos</h4>
+            </label>
+            <input type="text" name="mensajeaportador" class="form-control" required>
+          </div>
+
+
+
+
+          <div class="col-md-3  col-sm-3"></div>
+          <div class="row espaciado col-md-6 col-sm-6 ">
+            <button style="border-radius:10px; background-color: rgb(135, 206, 235);" type="submit ">
+              <h5>Enviar aporte</h5>
+            </button>
+          </div>
+          <div class="col-md-3 col-sm-3 "></div>
+
+          <div class="col-md-3 col-sm-5 "></div>
+          <div class="col-md-3 col-sm-5 espaciado"></div>
+
+
+        </div>
+      </form>
+    </div>
+    <div class="col-md-2 hidden-sm"></div>
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}
